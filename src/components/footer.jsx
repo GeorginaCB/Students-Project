@@ -1,6 +1,5 @@
 import React from 'react';
 import { FacebookLogo, InstagramLogo, LinkedinLogo, Envelope, PhonePause } from "@phosphor-icons/react";
-
 export const Footer = () => {
   return (
     <footer className="bg-rose-700 text-white py-4 px-4 bottom-0">

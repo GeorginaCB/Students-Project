@@ -4,8 +4,7 @@ import { Header } from "../components/header";
 import { users as initialUsers } from "../data/users";
 import { Footer } from "../components/footer";
 import { MagnifyingGlass } from "@phosphor-icons/react";
-
-const Users = () => {
+export const Users = () => {
   const [searchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState(searchParams.get("search") || "");
   const [users, setUsers] = useState(initialUsers);
@@ -15,7 +14,6 @@ const Users = () => {
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
-
   const getFilteredUsers = () => {
     if (!searchTerm) {
       return users;
@@ -26,12 +24,10 @@ const Users = () => {
       );
     }
   };
-
   const handleDelete = (userId) => {
     const updatedUsers = users.filter((user) => user.id !== userId);
     setUsers(updatedUsers);
   };
-
   const handleAddUser = (event) => {
     event.preventDefault();
     if (newUserName.trim() === "") return;
@@ -41,30 +37,22 @@ const Users = () => {
       linkUrl: `/users/${newUserName.toLowerCase().replace(/\s/g, "-")}`,
       linkLabel: newUserName.trim(),
     };
-
     const updatedUsers = [...users, newUser];
     setUsers(updatedUsers);
     setNewUserName("");
   };
-
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-
-    // Verifica se o nome pesquisado está na lista
     const foundUser = users.find((user) =>
       user.linkLabel.toLowerCase().includes(searchTerm.toLowerCase())
     );
-
     if (foundUser) {
       setSearchMessage("");
-      // Implemente sua lógica de pesquisa aqui, se necessário
       console.log("Pesquisar por:", searchTerm);
     } else {
       setSearchMessage(`O nome "${searchTerm}" não faz parte da lista de usuários. Por favor introduza um nome que faça parte da lista.`);
     }
   };
-
-  
   return (
     <>
       <Header />
@@ -120,7 +108,6 @@ const Users = () => {
           </div>
         )}
       </div>
-
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 container mx-auto p-4">
         {getFilteredUsers().map((user) => (
           <div key={user.id} className="p-4 border border-gray-300 rounded-md">
@@ -153,4 +140,3 @@ const Users = () => {
   );
 };
 
-export default Users;

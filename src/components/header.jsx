@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 export const Header = () => {
   return (
     <nav className="bg-rose-700 text-white py-4">
@@ -7,7 +6,6 @@ export const Header = () => {
         <div className="flex items-center">
           <img src="/image-logo.jpg" alt="Logo" className="h-10 mr-3" /> 
         </div>
-
         <div className="flex items-center">
           <Link to="/" className="mr-4 hover:text-rose-950">
             <span className="text-sm">Home</span>

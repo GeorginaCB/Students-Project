@@ -1,28 +1,24 @@
 import React, { useState } from "react";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
-
-const Contact = () => {
+export const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
-  const [submitted, setSubmitted] = useState(false); // Estado para controlar se o formulário foi submetido
+  const [submitted, setSubmitted] = useState(false); 
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Aqui você pode enviar os dados para o backend ou fazer outra ação desejada
     console.log(formData);
-    setSubmitted(true); // Define submitted como true para mostrar as informações do usuário
+    setSubmitted(true); 
   };
-
   return (
     <>
       <Header />
@@ -96,7 +92,7 @@ const Contact = () => {
           </div>
         </form>
         {submitted && (
-          <div className="bg-white shadow-md rounded p-4">
+          <div className="bg-rose-500 shadow-md rounded p-4  hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2">
             <h2 className="text-lg font-bold mb-2">Informações do Usuário:</h2>
             <p><strong>Nome:</strong> {formData.name}</p>
             <p><strong>Email:</strong> {formData.email}</p>
@@ -110,4 +106,3 @@ const Contact = () => {
   );
 };
 
-export default Contact;

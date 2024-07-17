@@ -2,9 +2,8 @@ import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 import { useParams } from "react-router-dom";
 
-const UserDatails = () => {
+export const UserDatails = () => {
   const params = useParams();
-
   return (
     <>
       <Header />
@@ -26,4 +25,4 @@ const UserDatails = () => {
   );
 };
 
-export default UserDatails;
+ 
