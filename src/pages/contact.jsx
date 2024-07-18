@@ -1,33 +1,53 @@
 import React, { useState } from "react";
+import { X } from "@phosphor-icons/react";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
-export const Contact = () => {
+
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
-  const [submitted, setSubmitted] = useState(false); 
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
-    setSubmitted(true); 
+    setSubmitted(true);
   };
-  return (
-    <>
-      <Header />
-      <div className="container mx-auto p-4">
-      <h2 className="text-lg font-bold mb-2 text-center">Introduza seus dados:</h2>
 
-        <form onSubmit={handleSubmit} className="max-w-lg mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+  const handleClose = () => {
+    setSubmitted(false);
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  };
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <div className="flex-grow">
+        <h2 className="text-lg font-bold mb-2 text-center">Introduza seus dados:</h2>
+
+        <form
+          onSubmit={handleSubmit}
+          className="max-w-lg mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        >
           <div className="mb-4">
-            <label htmlFor="name" className="block text-sm font-medium text-pink-700">
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-pink-700"
+            >
               Nome
             </label>
             <input
@@ -41,7 +61,10 @@ export const Contact = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-pink-700">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-pink-700"
+            >
               Email
             </label>
             <input
@@ -55,7 +78,10 @@ export const Contact = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="subject" className="block text-sm font-medium text-pink-700">
+            <label
+              htmlFor="subject"
+              className="block text-sm font-medium text-pink-700"
+            >
               Assunto
             </label>
             <input
@@ -69,7 +95,10 @@ export const Contact = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="message" className="block text-sm font-medium text-pink-700">
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-pink-700"
+            >
               Mensagem
             </label>
             <textarea
@@ -91,18 +120,37 @@ export const Contact = () => {
             </button>
           </div>
         </form>
+
         {submitted && (
-          <div className="bg-rose-500 shadow-md rounded p-4  hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2">
-            <h2 className="text-lg font-bold mb-2">Informações do Usuário:</h2>
-            <p><strong>Nome:</strong> {formData.name}</p>
-            <p><strong>Email:</strong> {formData.email}</p>
-            <p><strong>Assunto:</strong> {formData.subject}</p>
-            <p><strong>Mensagem:</strong> {formData.message}</p>
+          <div className="max-w-lg mx-auto bg-rose-500 shadow-md rounded px-8 pt-6 pb-8 mb-4 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 relative">
+            <button
+              onClick={handleClose}
+              className="absolute top-2 right-2 text-white hover:text-gray-300 focus:outline-none"
+            >
+              <X size={22} />
+            </button>
+            <h2 className="text-lg font-bold mb-2 text-white">
+              Informações do Usuário:
+            </h2>
+            <p className="text-white">
+              <strong>Nome:</strong> {formData.name}
+            </p>
+            <p className="text-white">
+              <strong>Email:</strong> {formData.email}
+            </p>
+            <p className="text-white">
+              <strong>Assunto:</strong> {formData.subject}
+            </p>
+            <p className="text-white">
+              <strong>Mensagem:</strong> {formData.message}
+            </p>
           </div>
         )}
       </div>
-      <Footer />
-    </>
+
+      <Footer className="mt-auto" /> {/* Adiciona a classe mt-auto para empurrar o footer para a parte inferior */}
+    </div>
   );
 };
 
+export default Contact;

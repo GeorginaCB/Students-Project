@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 export const Header = () => {
   return (
     <nav className="bg-rose-700 text-white py-4">
-      <div className="container mx-auto flex justify-between items-center px-4">
+      <div className="container mx-auto flex justify-between items-center ">
         <div className="flex items-center">
-          <img src="/image-logo.jpg" alt="Logo" className="h-10 mr-3" /> 
+          <p className="h-10 mr-3">  Projeto Geor 
+          </p>
         </div>
         <div className="flex items-center">
           <Link to="/" className="mr-4 hover:text-rose-950">

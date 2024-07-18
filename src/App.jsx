@@ -6,7 +6,7 @@ export const App = () => {
     <>
    
       <RouterProvider router={route} />
-  
+    
     </>
   );
 };

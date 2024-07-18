@@ -4,6 +4,7 @@ import { Header } from "../components/header";
 import { users as initialUsers } from "../data/users";
 import { Footer } from "../components/footer";
 import { MagnifyingGlass } from "@phosphor-icons/react";
+
 export const Users = () => {
   const [searchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState(searchParams.get("search") || "");
@@ -14,6 +15,7 @@ export const Users = () => {
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
+
   const getFilteredUsers = () => {
     if (!searchTerm) {
       return users;
@@ -24,10 +26,12 @@ export const Users = () => {
       );
     }
   };
+
   const handleDelete = (userId) => {
     const updatedUsers = users.filter((user) => user.id !== userId);
     setUsers(updatedUsers);
   };
+
   const handleAddUser = (event) => {
     event.preventDefault();
     if (newUserName.trim() === "") return;
@@ -41,6 +45,7 @@ export const Users = () => {
     setUsers(updatedUsers);
     setNewUserName("");
   };
+
   const handleSearchSubmit = (event) => {
     event.preventDefault();
     const foundUser = users.find((user) =>
@@ -50,30 +55,36 @@ export const Users = () => {
       setSearchMessage("");
       console.log("Pesquisar por:", searchTerm);
     } else {
-      setSearchMessage(`O nome "${searchTerm}" não faz parte da lista de usuários. Por favor introduza um nome que faça parte da lista.`);
+      setSearchMessage(
+        `O nome "${searchTerm}" não faz parte da lista de usuários. Por favor introduza um nome que faça parte da lista.`
+      );
     }
   };
+
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header />
       <div className="container mx-auto p-4">
         <div className="flex items-center mb-4">
-          <form onSubmit={handleSearchSubmit} className="flex">
+          <form
+            onSubmit={handleSearchSubmit}
+            className="flex space-x-2 items-center"
+          >
             <input
               type="text"
               placeholder="Pesquisar nome"
               value={searchTerm}
               onChange={handleSearchChange}
-              className="mr-2 p-2 border border-gray-300 rounded-md flex-1"
+              className="p-2 border border-gray-300 rounded-md"
             />
             <button
               type="submit"
-              className="bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600 text-white"
+              className="bg-rose-950 px-4 py-2 rounded-md hover:bg-rose-700 text-white"
             >
-              <MagnifyingGlass size={32} />
+              <MagnifyingGlass size={24} />
             </button>
           </form>
-          <form onSubmit={handleAddUser} className="flex ml-4">
+          <form onSubmit={handleAddUser} className="flex space-x-2 items-center">
             <input
               type="text"
               placeholder="Adicionar nome"
@@ -83,7 +94,7 @@ export const Users = () => {
             />
             <button
               type="submit"
-              className="bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600 text-white"
+              className="bg-rose-950 px-4 py-2 rounded-md hover:bg-rose-700 text-white"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -103,24 +114,27 @@ export const Users = () => {
           </form>
         </div>
         {searchMessage && (
-          <div className="p-2 bg-blue-600 text-black rounded-md mb-4 hover:text-blue-800">
+          <div className="p-2 bg-rose-700 text-white rounded-md mb-4">
             {searchMessage}
           </div>
         )}
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 container mx-auto p-4">
         {getFilteredUsers().map((user) => (
-          <div key={user.id} className="p-4 border border-gray-300 rounded-md">
-            <Link to={user.linkUrl} className="text-blue-600 hover:underline">
+          <div
+            key={user.id}
+            className="p-4 border border-gray-300 rounded-md flex justify-between items-center"
+          >
+            <Link to={user.linkUrl} className="text-rose-700 hover:underline">
               {user.linkLabel}
             </Link>
             <button
               onClick={() => handleDelete(user.id)}
-              className="ml-2 text-blue-600 hover:text-blue-800 focus:outline-none"
+              className="ml-2 text-rose-700 hover:text-rose-400 focus:outline-none"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 inline-block align-middle"
+                className="h-4 w-4"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -134,9 +148,9 @@ export const Users = () => {
           </div>
         ))}
       </div>
-
-      <Footer />
-    </>
+      <Footer className="mt-auto" />
+    </div>
   );
 };
 
+ 

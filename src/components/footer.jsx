@@ -1,9 +1,10 @@
 import React from 'react';
-import { FacebookLogo, InstagramLogo, LinkedinLogo, Envelope, PhonePause } from "@phosphor-icons/react";
+import { FacebookLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
+
 export const Footer = () => {
   return (
-    <footer className="bg-rose-700 text-white py-4 px-4 bottom-0">
-      <div className="flex flex-wrap gap-6">
+    <footer className="bg-rose-700 text-white py4 px-4 w-full ">
+      <div className="flex flex-wrap gap-3">
         <div className="w-full md:w-1/3">
           <h3 className="text-lg font-bold">Meu Projeto</h3>
           <p>© 2024 Todos os direitos reservados</p>
@@ -13,8 +14,8 @@ export const Footer = () => {
         <div className="w-full md:w-1/3">
           <h1 className="text-lg font-bold">Encontre-nos aqui</h1>
           <p>Endereço: 1 de Maio, Cidade-Matola</p>
-          <p>Telefone: (<PhonePause size={20} /> +258) 842945038 / 865565859</p>
-          <p><Envelope size={22} /><a href="mailto:georginadavidcumbe@gmail.com"> georginadavidcumbe@gmail.com</a></p>
+          <p>Telefone: (+258) 842945038/ 865565859</p>
+          <p><a href="mailto:georginadavidcumbe@gmail.com">georginadavidcumbe@gmail.com</a></p>
         </div>
         <div className="w-full md:w-1/3">
           <ul className="list-none px-4 py-2 rounded-md">
@@ -37,6 +38,14 @@ export const Footer = () => {
                 Linkedin
               </a>
             </li>
+          </ul>
+        </div>
+        <div>
+          <h1 className="text-lg font-bold">Formas de Pagamento</h1>
+          <ul className="flex flex-wrap gap-3">
+            <li><img src="/Logo-1.jpg" alt="Logo" className="h-16 mr-3" /></li>
+            <li><img src="/Logo-2.jpg" alt="Logo" className="h-16 mr-3" /></li>
+            <li><img src="/Logo-3.jpg" alt="Logo" className="h-16 mr-3" /></li>
           </ul>
         </div>
       </div>
