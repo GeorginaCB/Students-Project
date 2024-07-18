@@ -1,10 +1,9 @@
 import React from 'react';
 import { FacebookLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
-
 export const Footer = () => {
   return (
-    <footer className="bg-rose-700 text-white py4 px-4 w-full ">
-      <div className="flex flex-wrap gap-3">
+    <footer className="bg-rose-700 text-white py-4 px-4">
+      <div className="flex  gap-3">
         <div className="w-full md:w-1/3">
           <h3 className="text-lg font-bold">Meu Projeto</h3>
           <p>© 2024 Todos os direitos reservados</p>
@@ -40,7 +39,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="w-full md:w-1/3">
           <h1 className="text-lg font-bold">Formas de Pagamento</h1>
           <ul className="flex flex-wrap gap-3">
             <li><img src="/Logo-1.jpg" alt="Logo" className="h-16 mr-3" /></li>

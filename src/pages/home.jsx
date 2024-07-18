@@ -8,12 +8,12 @@ export const Home = () => {
       <Header />
       <section className="py-8">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-4">Bem-vindo à Página Inicial</h1>
-          <p className="text-lg mb-8">Explore nosso site para descobrir soluções incríveis.</p>
+          <h1 className="text-4xl font-bold">Bem-vindo à Página Inicial</h1>
+          <p className="text-lg">Explore nosso site para descobrir soluções incríveis.</p>
         </div>
       </section>
       <section>
-        <div className="container mx-auto mb-36">
+        <div className="container mx-auto mb-12">
           <div className="my-8 mx-auto max-w-full">
             <img src="/image-home.jpg" alt="Imagem da Página Inicial" className="rounded-lg shadow-md" />
           </div>

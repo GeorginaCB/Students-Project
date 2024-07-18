@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 export const Header = () => {
   return (
-    <nav className="bg-rose-700 text-white py-4">
+    <nav className="bg-rose-700 text-white py-4 mb-2">
       <div className="container mx-auto flex justify-between items-center ">
         <div className="flex items-center">
-          <p className="h-10 mr-3">  Projeto Geor 
+          <p className="h-10 mr-3">Projeto Geor 
           </p>
         </div>
         <div className="flex items-center">
@@ -22,3 +22,5 @@ export const Header = () => {
     </nav>
   );
 };
+import React from 'react';
+import { FacebookLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";

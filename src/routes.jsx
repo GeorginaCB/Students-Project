@@ -4,7 +4,7 @@ import { NotFound } from "./pages/NotFound";
 import { UserDatails } from "./pages/user-details";
 import { Home } from "./pages/home";
 import Contact from "./pages/contact";
-import Users from "./pages/users";
+import { Users } from "./pages/users";
 
 
 export const route = createBrowserRouter([
@@ -33,6 +33,16 @@ export const route = createBrowserRouter([
   },
   {
     path: "/servico-1",
+    element: <UserDatails/>
+  },
+  
+  {
+    path: "/servico-2",
+    element: <UserDatails/>
+  },
+  
+  {
+    path: "/servico-3",
     element: <UserDatails/>
   },
   

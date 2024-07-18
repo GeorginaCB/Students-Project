@@ -64,7 +64,7 @@ export const Users = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4 flex-1">
         <div className="flex items-center mb-4">
           <form
             onSubmit={handleSearchSubmit}
@@ -119,7 +119,7 @@ export const Users = () => {
           </div>
         )}
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 container mx-auto p-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 container mx-auto p-4">
         {getFilteredUsers().map((user) => (
           <div
             key={user.id}
@@ -152,5 +152,3 @@ export const Users = () => {
     </div>
   );
 };
-
- 
