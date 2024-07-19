@@ -1,3 +1,5 @@
+import { List } from "@phosphor-icons/react";
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -10,44 +12,23 @@ export const Header = () => {
   return (
     <nav className="bg-rose-700 text-white py-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center">
-          <p className="h-10 mr-3">Projeto Geor</p>
+        <div className="border-2 border-gray-300 rounded-lg px-2 flex items-center">
+          <p className="text-lg  hover:text-rose-950">Geor</p>
         </div>
         <div className="hidden md:flex items-center">
           <Link to="/" className="mr-4 hover:text-rose-950">
-            <span className="text-sm">Home</span>
+            <span className="text-lg">Home</span>
           </Link>
           <Link to="/users" className="mr-4 hover:text-rose-950">
-            <span className="text-sm">Lista de Estudantes</span>
+            <span className="text-lg">Lista de Estudantes</span>
           </Link>
           <Link to="/contact" className="hover:text-rose-950">
-            <span className="text-sm">Contacte-nos</span>
+            <span className="text-lg">Contacte-nos</span>
           </Link>
         </div>
         <div className="md:hidden flex items-center">
-          <button className="text-white focus:outline-none" onClick={toggleMenu}>
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {isMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
+          <button className="text-white focus:outline-none  hover:text-rose-950" onClick={toggleMenu}>
+          <List size={32} />
           </button>
         </div>
       </div>

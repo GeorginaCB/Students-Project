@@ -1,5 +1,5 @@
 import React from 'react';
-import { FacebookLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
+import { FacebookLogo, InstagramLogo, LinkedinLogo, GithubLogo  } from "@phosphor-icons/react";
 export const Footer = () => {
   return (
     <footer className="bg-rose-700 text-white py-4">
@@ -16,10 +16,11 @@ export const Footer = () => {
       <p>Telefone: (+258) 842945038 / 865565859</p>
       <p><a href="mailto:georginadavidcumbe@gmail.com">georginadavidcumbe@gmail.com</a></p>
     </div>
-    <div className="w-full flex justify-center items-center md:justify-start">
+    <div className="w-full">
       <div className="text-center">
         <h3 className="text-lg font-bold">Redes Sociais</h3>
-        <ul className="list-none px-4 py-2">
+        
+        <ul className="list-none px-32 py-2 ">
           <li className="flex items-center mt-2">
             <FacebookLogo className="mr-2" size={22} />
             <a href="https://www.facebook.com/georginadavid.cumbe" target="_blank" rel="noopener noreferrer" className="text-rose-950 hover:underline">
@@ -36,6 +37,12 @@ export const Footer = () => {
             <LinkedinLogo className="mr-2" size={22} />
             <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BOc9NfZEpQC6VI7Zojas4Mw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-rose-950 hover:underline">
               Linkedin
+            </a>
+          </li>
+          <li className="flex items-center mt-2">
+            <GithubLogo className="mr-2" size={22} />
+            <a href="https://github.com/GeorginaCB/Georgina-Cumbe.git" target="_blank" rel="noopener noreferrer" className="text-rose-950 hover:underline">
+            Github
             </a>
           </li>
         </ul>

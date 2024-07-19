@@ -2,28 +2,24 @@ import React from "react";
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
 import { useNavigate, useParams } from "react-router-dom";
-
 export const UserDatails = () => {
   const navigate = useNavigate();
   const params = useParams();
   const username = params.username ? params.username : "";
   const userNameParts = username ? username.split("-") : [];
-
   const handleLearnMore = () => {
     navigate(`/users/${username}/details`);
   };
-
   return (
     <>
       <Header />
-      <main className="relative overflow-y-auto">
-        <img
-          src="/image-details.avif"
-          alt="NotFound"
-          className="w-full h-auto object-cover md:object-center"
-          style={{ maxHeight: "calc(100vh - 64px)" }}
-        />
-
+      <main
+        className="relative overflow-y-auto bg-cover bg-center"
+        style={{
+          backgroundImage: `url('/image-details.avif')`,
+          minHeight: "calc(100vh - 64px)", 
+        }}
+      >
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full px-4 md:px-0">
           <h1 className="text-xl md:text-2xl lg:text-3xl mb-4 font-serif text-gray-800">
             {userNameParts.length >= 2 ? (
@@ -38,8 +34,7 @@ export const UserDatails = () => {
             ) : (
               <>
                 <p className="text-base md:text-lg lg:text-lg mb-4 ">
-                  Engenheiro Agrônomo:
-                  Especializado em ciências agrícolas, focando na melhoria da
+                  Engenheiro Agrônomo:Especializado em ciências agrícolas, focando na melhoria da
                   produção agrícola e na sustentabilidade ambiental. Oferece
                   serviços como planejamento e gestão de propriedades rurais,
                   consultoria técnica, projetos de irrigação, pesquisa agrícola

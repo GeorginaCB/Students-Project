@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { X } from "@phosphor-icons/react";
+import { XCircle } from "@phosphor-icons/react";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 
@@ -125,9 +125,9 @@ export const Contact = () => {
           <div className="max-w-lg mx-auto bg-rose-500 shadow-md rounded px-8 pt-6 pb-8 mb-4 sm:px-6 lg:px-8hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 relative">
             <button
               onClick={handleClose}
-              className="absolute top-2 right-2 text-white hover:text-gray-300 focus:outline-none"
+              className="absolute top-2 right-2 text-white hover:text-white focus:outline-none"
             >
-              <X size={22} />
+              <XCircle size={24} />
             </button>
             <h2 className="text-lg font-bold mb-2 text-white">
               Informações do Usuário:
