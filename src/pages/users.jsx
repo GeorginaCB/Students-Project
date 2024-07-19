@@ -62,13 +62,13 @@ export const Users = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen ">
       <Header />
-      <div className="container mx-auto p-4 flex-1">
-        <div className="flex flex-col md:flex-row items-center mb-4">
+      <div className="container mx-auto p-4 flex-1 mb-2">
+        <div className="flex flex-col md:flex-row items-center ">
           <form
             onSubmit={handleSearchSubmit}
-            className="flex space-x-2 items-center mb-2 md:mb-0 "
+            className="flex space-x-2 items-center md:mr-2 "
           >
             <input
               type="text"
@@ -79,7 +79,7 @@ export const Users = () => {
             />
             <button
               type="submit"
-              className="bg-rose-950 px-4 py-2 rounded-md hover:bg-rose-700 text-white"
+              className="bg-rose-950 px-4 py-2 mr-3 rounded-md hover:bg-rose-700 text-white"
             >
               <MagnifyingGlass size={24} />
             </button>
@@ -95,7 +95,7 @@ export const Users = () => {
             />
             <button
               type="submit"
-              className="bg-rose-950 px-4 py-2 rounded-md hover:bg-rose-700 text-white"
+              className="bg-rose-950 px-4 py-2  rounded-md hover:bg-rose-700 text-white"
             >
             <Plus size={24} />
             </button>
@@ -107,7 +107,7 @@ export const Users = () => {
           </div>
         )}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 container mx-auto p-4"> 
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 container mx-auto p-4 mb-32"> 
         {getFilteredUsers().map((user) => (
           <div
             key={user.id}

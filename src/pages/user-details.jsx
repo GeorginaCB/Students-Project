@@ -33,21 +33,22 @@ export const UserDatails = () => {
               </>
             ) : (
               <>
-                <p className="text-base md:text-lg lg:text-lg mb-4 ">
-                  Engenheiro Agrônomo:Especializado em ciências agrícolas, focando na melhoria da
+                <p className="text-base md:text-lg lg:text-lg mb-4 m-3 text-justify">
+
+                  Engenheiro Agrônomo: Especializado em ciências agrícolas, focando na melhoria da
                   produção agrícola e na sustentabilidade ambiental. Oferece
                   serviços como planejamento e gestão de propriedades rurais,
                   consultoria técnica, projetos de irrigação, pesquisa agrícola
                   e educação agrícola.
                 </p>
-                <p className="text-base md:text-lg lg:text-xl mb-4">
+                <p className="text-base md:text-lg lg:text-xl mb-4 m-3 text-justify">
                   Desenvolvedor Full-Stack Júnior: Capacitado para desenvolver
                   tanto o front-end quanto o back-end de aplicações web.
                   Realiza programação utilizando HTML, CSS, JavaScript,
                   frameworks como React, e Node.js para desenvolvimento de
                   APIs, além de manutenção e otimização de aplicações web.
                 </p>
-                <p className="text-base md:text-lg lg:text-xl mb-4">
+                <p className="text-base md:text-lg lg:text-xl mb-4 m-3 text-justify">
                   Sinergia entre Ambos: Colaboração em projetos para
                   desenvolvimento de aplicações agrícolas, análise de dados
                   agrícolas e automação de processos. Combinação de habilidades

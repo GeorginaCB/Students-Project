@@ -6,13 +6,13 @@ export const Home = () => {
   return (
     <>
       <Header />
-      <section className="py-8">
+      <section className="py-6 px-2 mb-1">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold sm:text-5xl">Bem-vindo à Página Inicial</h1>
           <p className="text-lg">Explore nosso site para descobrir soluções incríveis.</p>
         </div>
       </section>
-      <section>
+      <section className="mb-1">
         <div className="container mx-auto mb-12">
           <div className="my-8 mx-auto max-w-full">
             <img src="/image-home.jpg" alt="Imagem da Página Inicial" className="rounded-lg shadow-md w-full" />

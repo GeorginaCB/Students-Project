@@ -12,8 +12,8 @@ export const Header = () => {
   return (
     <nav className="bg-rose-700 text-white py-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="border-2 border-gray-300 rounded-lg px-2 flex items-center">
-          <p className="text-lg  hover:text-rose-950">Geor</p>
+        <div className=" border-2 border-gray-300 rounded-lg px-2 flex items-center ml-3">
+          <p className="text-lg px-4 hover:text-rose-950">Geor</p>
         </div>
         <div className="hidden md:flex items-center">
           <Link to="/" className="mr-4 hover:text-rose-950">

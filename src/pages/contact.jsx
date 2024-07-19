@@ -34,15 +34,14 @@ export const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col ">
       <Header />
       <div className="flex-grow">
-        <h2 className="text-lg font-bold mb-2 text-center">Introduza seus dados:</h2>
-
         <form
           onSubmit={handleSubmit}
-          className="max-w-lg mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 sm:px-6.lg:px-8"
+          className="max-w-lg mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mt-36 mb-24 sm:px-6.lg:px-8"
         >
+          <h2 className="text-lg font-bold mb-2 text-center">Introduza seus dados:</h2>
           <div className="mb-4">
             <label
               htmlFor="name"

@@ -50,7 +50,7 @@ export const Footer = () => {
     </div>
     <div className="w-full">
       <h3 className="text-lg font-bold">Formas de Pagamento</h3>
-      <div className="flex flex-wrap gap-3 items-center justify-center">
+      <div className="flex flex-wrap gap-5 items-center justify-center">
         <img src="/Logo-1.jpg" alt="Logo" className="h-16" />
         <img src="/Logo-2.jpg" alt="Logo" className="h-16" />
         <img src="/Logo-3.jpg" alt="Logo" className="h-16" />
