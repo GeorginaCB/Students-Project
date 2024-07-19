@@ -4,7 +4,6 @@ import { Header } from "../components/header";
 import { users as initialUsers } from "../data/users";
 import { Footer } from "../components/footer";
 import { MagnifyingGlass } from "@phosphor-icons/react";
-
 export const Users = () => {
   const [searchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState(searchParams.get("search") || "");
@@ -65,17 +64,17 @@ export const Users = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
       <div className="container mx-auto p-4 flex-1">
-        <div className="flex items-center mb-4">
+        <div className="flex flex-col md:flex-row items-center mb-4">
           <form
             onSubmit={handleSearchSubmit}
-            className="flex space-x-2 items-center"
+            className="flex space-x-2 items-center mb-2 md:mb-0"
           >
             <input
               type="text"
               placeholder="Pesquisar nome"
               value={searchTerm}
               onChange={handleSearchChange}
-              className="p-2 border border-gray-300 rounded-md"
+              className="p-2 border border-gray-300 rounded-md w-full md:w-auto"
             />
             <button
               type="submit"
@@ -90,7 +89,7 @@ export const Users = () => {
               placeholder="Adicionar nome"
               value={newUserName}
               onChange={(e) => setNewUserName(e.target.value)}
-              className="p-2 border border-gray-300 rounded-md"
+              className="p-2 border border-gray-300 rounded-md w-full md:w-auto"
             />
             <button
               type="submit"
@@ -119,7 +118,7 @@ export const Users = () => {
           </div>
         )}
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 container mx-auto p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 container mx-auto p-4"> 
         {getFilteredUsers().map((user) => (
           <div
             key={user.id}

@@ -1,17 +1,13 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import { createBrowserRouter, } from "react-router-dom";
 import { NotFound } from "./pages/NotFound";
 import { UserDatails } from "./pages/user-details";
 import { Home } from "./pages/home";
-import Contact from "./pages/contact";
 import { Users } from "./pages/users";
-
-
+import { Contact } from "./pages/contact";
 export const route = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-   
   },
   {
     path: "/contact",
@@ -25,8 +21,6 @@ export const route = createBrowserRouter([
     path: "/users/:username",
     element: <UserDatails/>
   },
-  
-
   {
     path: "*",
     element: <NotFound/>

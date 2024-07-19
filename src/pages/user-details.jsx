@@ -16,41 +16,57 @@ export const UserDatails = () => {
   return (
     <>
       <Header />
-      <main className="relative">
+      <main className="relative overflow-y-auto">
         <img
-          src="/image-details.jpg"
+          src="/image-details.avif"
           alt="NotFound"
-          className="w-full h-auto"
-          style={{ maxHeight: "100vh", objectFit: "cover" }}
+          className="w-full h-auto object-cover md:object-center"
+          style={{ maxHeight: "calc(100vh - 64px)" }}
         />
 
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full">
-          <h1 className="text-2xl mb-4 font-serif text-gray-800">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full px-4 md:px-0">
+          <h1 className="text-xl md:text-2xl lg:text-3xl mb-4 font-serif text-gray-800">
             {userNameParts.length >= 2 ? (
               <>
                 Olá, Eu Sou{" "}
-                {userNameParts[0].charAt(0).toUpperCase() + userNameParts[0].slice(1)}{" "}
-                {userNameParts[1].charAt(0).toUpperCase() + userNameParts[1].slice(1)}{" "}
+                {userNameParts[0].charAt(0).toUpperCase() +
+                  userNameParts[0].slice(1)}{" "}
+                {userNameParts[1].charAt(0).toUpperCase() +
+                  userNameParts[1].slice(1)}{" "}
                 seja bem-vindo(a) a minha página. Como posso ser útil?
               </>
             ) : (
               <>
-  Engenheiro Agrônomo:
-  Especializado em ciências agrícolas, focando na melhoria da produção agrícola e na sustentabilidade ambiental.
-  Oferece serviços como planejamento e gestão de propriedades rurais, consultoria técnica, projetos de irrigação, pesquisa agrícola e educação agrícola.
-  Desenvolvedor Full-Stack Júnior:
-  Capacitado para desenvolver tanto o front-end quanto o back-end de aplicações web.
-  Realiza programação utilizando HTML, CSS, JavaScript, frameworks como React, e Node.js para desenvolvimento de APIs, além de manutenção e otimização de aplicações web.
-  Sinergia entre Ambos:
-  Colaboração em projetos para desenvolvimento de aplicações agrícolas, análise de dados agrícolas e automação de processos.
-  Combinação de habilidades para criar soluções inovadoras que integram conhecimentos agronômicos e tecnológicos.
-  Essa combinação de competências pode resultar em soluções tecnológicas avançadas para desafios agrícolas, contribuindo para melhorias na eficiência e sustentabilidade do setor agrícola.
+                <p className="text-base md:text-lg lg:text-lg mb-4 ">
+                  Engenheiro Agrônomo:
+                  Especializado em ciências agrícolas, focando na melhoria da
+                  produção agrícola e na sustentabilidade ambiental. Oferece
+                  serviços como planejamento e gestão de propriedades rurais,
+                  consultoria técnica, projetos de irrigação, pesquisa agrícola
+                  e educação agrícola.
+                </p>
+                <p className="text-base md:text-lg lg:text-xl mb-4">
+                  Desenvolvedor Full-Stack Júnior: Capacitado para desenvolver
+                  tanto o front-end quanto o back-end de aplicações web.
+                  Realiza programação utilizando HTML, CSS, JavaScript,
+                  frameworks como React, e Node.js para desenvolvimento de
+                  APIs, além de manutenção e otimização de aplicações web.
+                </p>
+                <p className="text-base md:text-lg lg:text-xl mb-4">
+                  Sinergia entre Ambos: Colaboração em projetos para
+                  desenvolvimento de aplicações agrícolas, análise de dados
+                  agrícolas e automação de processos. Combinação de habilidades
+                  para criar soluções inovadoras que integram conhecimentos
+                  agronômicos e tecnológicos. Essa combinação de competências
+                  pode resultar em soluções tecnológicas avançadas para
+                  desafios agrícolas, contribuindo para melhorias na eficiência
+                  e sustentabilidade do setor agrícola.
+                </p>
               </>
             )}
           </h1>
-
           <span
-            className="text-blue-500 cursor-pointer underline"
+            className="text-blue-500 cursor-pointer underline text-sm md:text-base lg:text-lg"
             onClick={handleLearnMore}
           >
           </span>

@@ -1,21 +1,20 @@
 import React from "react";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
-
 export const Home = () => {
   return (
     <>
       <Header />
       <section className="py-8">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold">Bem-vindo à Página Inicial</h1>
+          <h1 className="text-4xl font-bold sm:text-5xl">Bem-vindo à Página Inicial</h1>
           <p className="text-lg">Explore nosso site para descobrir soluções incríveis.</p>
         </div>
       </section>
       <section>
         <div className="container mx-auto mb-12">
           <div className="my-8 mx-auto max-w-full">
-            <img src="/image-home.jpg" alt="Imagem da Página Inicial" className="rounded-lg shadow-md" />
+            <img src="/image-home.jpg" alt="Imagem da Página Inicial" className="rounded-lg shadow-md w-full" />
           </div>
         </div>
       </section>
@@ -23,7 +22,7 @@ export const Home = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Nossos Serviços</h2>
           <p className="text-gray-700 mb-8">Descubra como podemos ajudar você a alcançar seus objetivos.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div className="bg-pink-600 rounded-lg shadow-md p-6">
               <h3 className="text-xl font-bold mb-2">Serviço 1</h3>
               <p className="text-gray-700">Desenvolvimento Front-end.</p>

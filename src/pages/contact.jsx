@@ -3,7 +3,7 @@ import { X } from "@phosphor-icons/react";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 
-const Contact = () => {
+export const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -41,7 +41,7 @@ const Contact = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="max-w-lg mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          className="max-w-lg mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 sm:px-6.lg:px-8"
         >
           <div className="mb-4">
             <label
@@ -122,7 +122,7 @@ const Contact = () => {
         </form>
 
         {submitted && (
-          <div className="max-w-lg mx-auto bg-rose-500 shadow-md rounded px-8 pt-6 pb-8 mb-4 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 relative">
+          <div className="max-w-lg mx-auto bg-rose-500 shadow-md rounded px-8 pt-6 pb-8 mb-4 sm:px-6 lg:px-8hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 relative">
             <button
               onClick={handleClose}
               className="absolute top-2 right-2 text-white hover:text-gray-300 focus:outline-none"
@@ -148,9 +148,9 @@ const Contact = () => {
         )}
       </div>
 
-      <Footer className="mt-auto" /> {/* Adiciona a classe mt-auto para empurrar o footer para a parte inferior */}
+      <Footer className="mt-auto" /> 
     </div>
   );
 };
 
-export default Contact;
+ 
