@@ -1,10 +1,10 @@
-import { Plus,XCircle } from "@phosphor-icons/react";
 import React, { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Header } from "../components/header";
 import { users as initialUsers } from "../data/users";
 import { Footer } from "../components/footer";
-import { MagnifyingGlass } from "@phosphor-icons/react";
+import { MagnifyingGlass, Plus, XCircle } from "@phosphor-icons/react";
+
 export const Users = () => {
   const [searchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState(searchParams.get("search") || "");
@@ -62,13 +62,13 @@ export const Users = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen ">
+    <div className="flex flex-col min-h-screen">
       <Header />
       <div className="container mx-auto p-4 flex-1 mb-2">
-        <div className="flex flex-col md:flex-row items-center ">
+        <div className="flex flex-col md:flex-row items-center">
           <form
             onSubmit={handleSearchSubmit}
-            className="flex space-x-2 items-center md:mr-2 "
+            className="flex space-x-2 items-center md:mr-2"
           >
             <input
               type="text"
@@ -79,13 +79,12 @@ export const Users = () => {
             />
             <button
               type="submit"
-              className="bg-rose-950 px-4 py-2 mr-3 rounded-md hover:bg-rose-700 text-white"
+              className="bg-rose-950 px-4 py-2 rounded-md hover:bg-rose-700 text-white"
             >
               <MagnifyingGlass size={24} />
             </button>
           </form>
-          <form onSubmit={handleAddUser} 
-          className="flex space-x-2 items-center">
+          <form onSubmit={handleAddUser} className="flex space-x-2 items-center">
             <input
               type="text"
               placeholder="Adicionar nome"
@@ -95,9 +94,9 @@ export const Users = () => {
             />
             <button
               type="submit"
-              className="bg-rose-950 px-4 py-2  rounded-md hover:bg-rose-700 text-white"
+              className="bg-rose-950 px-4 py-2 rounded-md hover:bg-rose-700 text-white"
             >
-            <Plus size={24} />
+              <Plus size={24} />
             </button>
           </form>
         </div>
@@ -107,7 +106,7 @@ export const Users = () => {
           </div>
         )}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 container mx-auto p-4 mb-32"> 
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 container mx-auto p-4 mb-32">
         {getFilteredUsers().map((user) => (
           <div
             key={user.id}

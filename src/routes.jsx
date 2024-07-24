@@ -39,7 +39,4 @@ export const route = createBrowserRouter([
     path: "/servico-3",
     element: <UserDatails/>
   },
-  
- 
-
 ]);
